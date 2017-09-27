@@ -1,0 +1,126 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  font-size: 26px;
+  line-height: 1.5;
+  background-color: #000;
+  color: #fff;
+}
+
+/* -------------- SLIDESHOW --------------  */
+.slideshow {
+  position: relative;
+  width: 100vw;
+  height:100vh;
+  overflow: hidden;
+}
+
+/* -------------- TITLE --------------  */
+h1 {
+  font-size: 36px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+/* -------------- INFO BOX --------------  */
+.info {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  width: 400px;
+  height: 70%;
+  padding: 30px 10px 30px 60px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.open {
+  transform: translateX(-17.5%);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+.info ul {
+  margin-bottom: 30px;
+}
+
+.info p {
+  font-size:22px;
+}
+
+/* -------------- IMAGES HOLDER--------------  */
+.holder {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 5000vw;
+  height: 100vh;
+  transition: left 1s;
+}
+
+.holder figure {
+  float: left;
+  width: 100vw;
+  height: 100vh;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 30px;
+}
+
+.slide-1 {
+  background-image: url("../images/linda-evangelista_1.jpg");
+}
+
+.slide-2 {
+  background-image: url("../images/linda-evangelista_2.jpg");
+}
+
+.slide-3 {
+  background-image: url("../images/linda_evangelista_3.jpg");
+}
+
+.slide-4 {
+  background-image: url("../images/linda-evangelista_4.jpg");
+}
+
+.slide-5 {
+  background-image: url("../images/linda-evangelista_5.jpg");
+}
+
+/* -------------- STEPS --------------  */
+.steps {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* -------------- PREV and NEXT --------------  */
+a {
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  padding: 20px 30px;
+  z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
