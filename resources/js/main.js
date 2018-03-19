@@ -1,20 +1,19 @@
 // ------- SLIDE FUNCTIONS ---------
+let currentSlide = 0;
 
-var currentSlide = 0;
+const totalSlides = $(".holder figure").length
 
-var totalSlides = $(".holder figure").length
-
-var moveSlide = function (slide) {
-  var leftPosition = (-slide * 100) + "vw";
+const moveSlide = slide => {
+  const leftPosition = (-slide * 100) + "vw";
 
   $(".holder").css("left", leftPosition);
 
-  var slideNumber = slide +1;
+  const slideNumber = slide + 1;
 
   $(".steps").text(slideNumber + "/" + totalSlides);
 }
 
-var nextSlide = function() {
+const nextSlide = () => {
   currentSlide = currentSlide + 1;
 
   if (currentSlide >= totalSlides) {
@@ -24,7 +23,7 @@ var nextSlide = function() {
   moveSlide(currentSlide);
 }
 
-var previousSlide = function () {
+const previousSlide = () => {
   currentSlide = currentSlide - 1;
 
   if (currentSlide < 0) {
@@ -33,13 +32,10 @@ var previousSlide = function () {
   moveSlide(currentSlide);
 }
 
-var autoSlide = setInterval(function() {
-nextSlide()
-
-}, 3000);
+const autoSlide = setInterval(() => {
+nextSlide() }, 3000);
 
 // ------- PREV and NEXT ---------
-
 $(".next").on("click", function() {
   clearInterval(autoSlide)
 
@@ -53,13 +49,10 @@ $(".prev").on("click", function(){
 });
 
 // ---------- STEPS ------------
-
-var slideNumber = currentSlide + 1;
-
+const slideNumber = currentSlide + 1;
 $(".steps").text(slideNumber + "/" + totalSlides);
 
 // --------- INFO BOX -----------
-
 $(".info, img.arrow").on("click", function(){
   $(".info").toggleClass("open");
 
