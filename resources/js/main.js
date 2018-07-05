@@ -53,8 +53,10 @@ const slideNumber = currentSlide + 1;
 $(".steps").text(slideNumber + "/" + totalSlides);
 
 // --------- INFO BOX -----------
-$(".info, img.arrow").on("click", function(){
-  $(".info").toggleClass("open");
+$(".info, .arrow.open").on("click", function(){
+  $(".info").toggleClass("open_info");
+  $(".arrow.close").toggleClass("show");
+  $(".arrow.open").toggleClass("hide");
 
   return false;
 });

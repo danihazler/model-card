@@ -36,7 +36,7 @@ h1 {
   transition: transform 0.5s ease;
 }
 
-.open {
+.open_info {
   transform: translateX(-17.5%);
 }
 
@@ -47,6 +47,15 @@ h1 {
   width: 30px;
   height: auto;
   cursor: pointer;
+}
+
+.close,
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .info ul {
