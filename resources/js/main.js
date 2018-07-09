@@ -1,7 +1,7 @@
 // ------- SLIDE FUNCTIONS ---------
 let currentSlide = 0;
 
-const totalSlides = $(".holder figure").length
+const totalSlides = $(".holder figure").length;
 
 const moveSlide = slide => {
   const leftPosition = (-slide * 100) + "vw";
@@ -37,13 +37,13 @@ nextSlide() }, 3000);
 
 // ------- PREV and NEXT ---------
 $(".next").on("click", function() {
-  clearInterval(autoSlide)
+  clearInterval(autoSlide);
 
   nextSlide();
 });
 
 $(".prev").on("click", function(){
-  clearInterval(autoSlide)
+  clearInterval(autoSlide);
 
   previousSlide();
 });
