@@ -133,3 +133,32 @@ a {
 .next {
     right: 0;
 }
+
+/* -------------- MEDIA QUERIES --------------  */
+@media (max-width: 570px) {
+  body {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .info {
+    padding: 10px 0 0 60px;
+    height: 210px;
+    width:  300px;
+  }
+  .info ul {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .info p {
+    font-size: 12px;
+  }
+  .steps {
+    bottom: 5px;
+  }
+  a.prev,
+  a.next {
+    padding: 0 10px;
+  }
+}
